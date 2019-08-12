@@ -126,10 +126,27 @@ body{
 .time-line li h4{
     background-color: #000;
     padding: 5px 0 5px 20px;
-    column-rule-color: #fff;
+    color: #fff;
     font-size: 15px;
 }
 
+.time-line li h4 span{
+    font-weight: bold;
+    color: rgba(133, 131, 131, 0.5);
+}
+
+/* .time-line li::before{
+    content: ' ';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid rgba(34, 33, 33, 0.5);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+} */
 /* .grid-container{
     display: inline-grid;
     grid-template-columns: 300px auto ;
