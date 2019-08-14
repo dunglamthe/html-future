@@ -1,3 +1,66 @@
-$(document).ready(function () {
-	$.lockfixed("#sidebar", {offset: {top: 20, bottom: 470} });
-});
+/* ------Desktop------ */
+@media	only screen and (max-width: 1200px){
+	h1{
+		color: red;
+	}
+	.grid-container{
+		width: 100%;
+	}
+	
+}
+/* ------Tablet------ */
+@media	only screen and (max-width: 1023px){
+	h1{
+		color: blue;
+	}
+	.grid-container{
+		width: 100%;
+	}
+}
+/* ------Phone------ */
+@media	only screen and (max-width: 767px){
+	h1{
+		color: green;
+	}
+	.item5 p{
+		font-size: 14px;
+	}
+	.grid-container{
+		display: grid;
+		grid-template-areas:'menu menu menu menu menu menu'
+							'header header header header header header'
+							'main main main right right right'
+							'body body body body body body'
+							'footer footer footer footer footer footer';
+		grid-gap: 1px;
+		background-color: #2196F3;
+		padding: 1px;
+	}
+}
+/* ------Small Phone------ */
+@media	only screen and (max-width: 480px){
+	
+	h1{
+		color: yellow;
+	}
+	.grid-container{
+		font-size: 8px;
+		width: 100%;
+	}
+	.grid-container{
+		display: grid;
+		grid-template-areas:'menu menu'
+							'header header '
+							'main main '
+							'right right'
+							'body body'
+							'footer1 footer2'
+							'footer3 footer4';
+		grid-gap: 1px;
+		background-color: #2196F3;
+		padding: 1px;
+	}
+	.item5 p{
+		font-size: 12px;
+	}
+}

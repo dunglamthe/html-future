@@ -20,6 +20,9 @@ body{
     background-attachment: fixed;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 .about{
     padding-top: 100px;
     padding-bottom: 50px;
@@ -72,7 +75,7 @@ body{
     background-color: black;
     position: fixed;
     width: 100%;
-    z-index: 1; 
+    z-index: 100; 
     top: 0px;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.6);
 }
@@ -156,46 +159,29 @@ body{
 /* -----------style quest 01------- */
 /* -------------------------------- */
 
-.grid-container{
-    display: inline-grid;
-    grid-template-columns: 300px auto ;
-    grid-template-rows: 300px auto;
-    background-color: #fff;
-    max-width: auto;
-    margin: auto;
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: body; }
+.item6 { grid-area: footer1;}        
+.item7 { grid-area: footer2;}        
+.item8 { grid-area: footer3;}        
+.item9 { grid-area: footer4;}        
+.grid-container {
+    display: grid;
+    grid-template-areas:'menu header header header header header'
+                        'menu main main main right right'
+                        'menu body body body body body'
+                        'footer1 footer1 footer2 footer3 footer4 footer4';
+    grid-gap: 1px;
+    background-color: #2196F3;
+    padding: 1px;
 }
-
-.grid-item{
+        
+.grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    font-size: 30px;
     text-align: center;
-}
-
-.avatar{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-.about-avatar img {
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    border: 2px solid #71c7ec;
-    box-shadow: 0px 5px 15px 5px #005073;
-    transition: all 0.8s;
-}
-
-
-
-.about-avatar:hover img,
-.about-avatar:active img {
-    filter: brightness(70%) blur(2px);
-}
-
-.about-avatar:hover .avatar-title,
-.about-avatar:active .avatar-title {
-    transform: translate(-60%, -50%);
-    opacity: 1;
+    padding: 1px;
+    font-size: 30px;
 }
