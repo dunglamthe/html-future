@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2{
+            font:bold 20px Arial, Helvetica, sans-serif;
+            color:#222;
+            margin-bottom:20px;
+            margin-left:350px;
+        }
+        div{
+            height:40px;
+            width:200px;
+            border:0;
+            background:#ccc;
+            position:relative;
+            margin-right:20px;
+            margin-bottom:5px;
+        }
+        .hover-progressbar:after{
+            position:absolute;
+            top:0;
+            left:0;
+            width:0;
+            height:40px;
+            background:#222;
+            display:inline-block;
+            content:'';
+            transition: width 0.5s ease-in-out;
+            opacity: 0.2;
+        }
+        .hover-progressbar:hover:after{
+            width:60%;
+            opacity: 1;
+        }
+        .text{
+            opacity: 0;
+            transition: all 0.8s;
+        }
+        .text::before{
+            text-align: left;
+            color: #ccc;
+            visibility: visible;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hover Button with progress</h2>
+        <div class="hover-progressbar progress-bar">
+            <p class="text">60%</p>
+        </div>       
+        <div class="hover-progressbar progress-bar">
+            <p class="text">60%</p>
+        </div>       
+</body>
+</html>

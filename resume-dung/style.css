@@ -92,13 +92,43 @@ body{
 .progress{
     border-radius: 16px !important;
     margin-bottom: 10px;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
 }
 
 .progress-bar{
     border-radius: 16px;
     background:  #000 !important;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease;
 }
 
+.progress-bar::after{
+    content:'A';
+    top:100%;
+    left:0%;
+    width:0;
+    height:2px;
+    background:#222;
+    display:block;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-bar:hover:after{
+    width: 60%;
+    display: inline-flexbox;
+}
 .resume{
     padding-top: 50px;
     padding-bottom: 30px;
